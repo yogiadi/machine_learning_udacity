@@ -13361,11 +13361,11 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <p>Reference :-
 <a href="https://www.uni-obuda.hu/journal/Markoski_Ivankovic_Ratgeber_Pecev_Glusac_57.pdf">https://www.uni-obuda.hu/journal/Markoski_Ivankovic_Ratgeber_Pecev_Glusac_57.pdf</a></p>
 <p>Advantages :-</p>
-<p>Adaboost can achieve similar classification results with much less tweaking of parameters or settings. Weak classifier and number of boosting rounds should be only specified.</p>
+<p>Adaboost can be used with many different classifiers.It also improves classification accuracy. It is also simple to use and not prone to overfitting.</p>
 <p>Disadvantages :-</p>
 <p>Adaboost is more susceptible to noisy data and outliers.</p>
 <p><a href="http://www.nickgillian.com/wiki/pmwiki.php/GRT/AdaBoost#Advantages">http://www.nickgillian.com/wiki/pmwiki.php/GRT/AdaBoost#Advantages</a></p>
-<p>Adaboost uses less time to classify problem because other classify problem takes too much time or overfits the model. So, it can be used in this case.</p>
+<p>Adaboost is known to be very adaptive. In this case , the data has 45,222 records so even though generally Adaptive boosting is computationally expensive but in this case it is applicable.</p>
 <p><strong>DecisionTree Classifier</strong></p>
 <p>DecisionTree classifier can be used for classifying of astronomical objects.</p>
 <p>Reference :-
@@ -13375,7 +13375,9 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <p>Disadvantages :-</p>
 <p>Decision trees can result in increase in max-depth which may result in over complicating the model.</p>
 <p><a href="https://www.techwalla.com/articles/advantages-disadvantages-of-decision-trees">https://www.techwalla.com/articles/advantages-disadvantages-of-decision-trees</a></p>
-<p>A number of variables like education , age and marital status are there so it makes sense that someone with less age but with better education earns more. Hence decision tree should be used here.</p>
+<p>The cost of using the tree is logarithmic in the number of data points used to train the tree.
+Also the visualization of the model is also easy and can be explained by Boolean Logic. Also , it is possible to validate a model using statistical tests. That makes it possible to account for the reliability of the model.
+Performs well even if its assumptions are somewhat violated by the true model from which the data were generated.</p>
 <p><strong>SVM Classifier</strong></p>
 <p>SVMs are helpful in text and hypertext categorization as their application can significantly reduce the need for labeled training instances in both the standard inductive and transductive settings.</p>
 <p>Reference :-
@@ -14372,10 +14374,25 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>Adaboost can be used in conjunction with many other types of learning algorithms to improve their performance. The output of the other learning algorithms which are called as weak algorithms is combined into a weighted sum that represents the final output of the boosted classifier. If each record has various parameters then any classifier will evaluate features which may reduce the predictive time and also affect predictive capability.AdaBoost training process selects only those features known to improve the predictive power of the model, reducing dimensionality and potentially improving execution time as irrelevant features do not need to be computed.
-Each weak learner produces an output for each sample in the training set. At each iteration a weak learner is selected and assigned a coefficient such that the sum training error of the resulting t-stage boost classifier is minimized.At each iteration of the training process, a weight is assigned to each sample in the training set equal to the current error on that sample. These weights can be used to inform the training of the weak learner.</p>
+<p>Adaboost uses different methods to improve upon the results and finally combines the results achieving much better results when methods are used individually.</p>
+<p>Let us consider three methods D1, D2 and D3.</p>
+<p>Our task is to correctly classify plus and minus in the below box.</p>
+<p>The first method correctly classifies two plus on the left but makes a mistake for the right ones.</p>
+<p>Now the priority of the second method is to correctly classify those which has been misclassiffied by D1(indicated by larger plus sign).</p>
+<p>As a result some of the minus signs are now misclassified represented by large minus signs.Now the priority of third method D3 will be to classify the large minus signs correctly.</p>
+<p>Finally we will combine the results of all the three methods and we will correctly classify each of the points.</p>
+<p><img src="adaboost.jpeg" alt="alt text" title="Adaboost"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Reference:-</p>
 <p><a href="https://en.wikipedia.org/wiki/AdaBoost">https://en.wikipedia.org/wiki/AdaBoost</a></p>
+<p><a href="https://www.analyticsvidhya.com/wp-content/uploads/2015/11/bigd.png">https://www.analyticsvidhya.com/wp-content/uploads/2015/11/bigd.png</a></p>
 
 </div>
 </div>
